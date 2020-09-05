@@ -62,23 +62,23 @@ for page in pages:
 To avoid having to log in again every time we run our script, we can save the cookies containing our session and load them whenever we want.
 
 The saved auth cookie can be reused for up to 90 days.
-## Saving the auth_cookies
+## Saving session
 ```python
 from sfybook.client import Client
 
 client = Client()
 client.auth.login(email, password)
 filename = "./root/filename.json"
-client.save_session(filename=filename)
+client.auth.save_session(filename=filename)
 ```
 ---
-## Loading the auth_cookies
+## Loading session
 ```python
 from sfybook.client import Client
 
 client = Client()
 filename = "./root/filename.json"
-client.load_session(filename=filename)
+client.auth.load_session(filename=filename)
 ```
 ---
 ## Donate
