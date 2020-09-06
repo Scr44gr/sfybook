@@ -68,7 +68,7 @@ from sfybook.client import Client
 
 client = Client()
 client.auth.login(email, password)
-filename = "./root/filename.json"
+filename = r"./root/filename.json"
 client.auth.save_session(filename=filename)
 ```
 ---
@@ -77,7 +77,7 @@ client.auth.save_session(filename=filename)
 from sfybook.client import Client
 
 client = Client()
-filename = "./root/filename.json"
+filename = r"./root/filename.json"
 client.auth.load_session(filename=filename)
 ```
 ---
