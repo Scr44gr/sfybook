@@ -37,7 +37,7 @@ class Pages(Utils):
                 page = html.find('a')
                 name = page.find('img')['alt'].split(',')[0]
                 url = urls.origin_url()+'/'+page['href'].split('/')[1]
-                url = url
+                
                 yield SfyNode(self.session, url_id=url, name=name)
             except AttributeError:
                 continue
