@@ -15,7 +15,7 @@ class Utils:
         self.session = session
 
     @property
-    def uuid(self) -> int:
+    def uuid(self) -> str:
         return '-'*28+str(UUID(int=getrandbits(95)).int)
 
     def make_request(self, url: str) -> bytes:
