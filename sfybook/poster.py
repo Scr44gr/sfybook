@@ -92,7 +92,7 @@ class Poster(Utils):
                 response.content, get_endpoint=True)
             data['xc_message'] = text
             data['view_post'] = 'Post'
-            payload = MPEncoder(data, boundary='-'*28+str(self.uuid))
+            payload = MPEncoder(data, boundary=self.uuid)
             return self.__post(data=payload, endpoint=endpoint)
 
     def __post_image_to_facebook(self, **kwargs):
